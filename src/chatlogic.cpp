@@ -36,6 +36,8 @@ ChatLogic::~ChatLogic()
     delete _chatBot;
 
     // delete all nodes
+    // Loops no longer needed due to _nodes being smart pointers instead of raw pointers
+    /*
     for (auto it = std::begin(_nodes); it != std::end(_nodes); ++it)
     {
         delete *it;
@@ -46,6 +48,7 @@ ChatLogic::~ChatLogic()
     {
         delete *it;
     }
+    */
 
     ////
     //// EOF STUDENT CODE
@@ -160,17 +163,19 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
                             auto childNode = std::find_if(_nodes.begin(), _nodes.end(), [&childToken](GraphNode *node) { return node->GetID() == std::stoi(childToken->second); });
 
                             // create new edge
-                            GraphEdge *edge = new GraphEdge(id);
-                            edge->SetChildNode(*childNode);
-                            edge->SetParentNode(*parentNode);
-                            _edges.push_back(edge);
+                            //GraphEdge *edge = new GraphEdge(id);
+                            std::unique_ptr<GraphEdge> edge = std::make_unique<GraphEdge>(id);
+
+                            edge->SetChildNode((*childNode).get());
+                            edge->SetParentNode((*parentNode).get());
+                            //_edges.push_back(edge);
 
                             // find all keywords for current node
                             AddAllTokensToElement("KEYWORD", tokens, *edge);
 
                             // store reference in child node and parent node
-                            (*childNode)->AddEdgeToParentNode(edge);
-                            (*parentNode)->AddEdgeToChildNode(edge);
+                            (*childNode)->AddEdgeToParentNode((edge).get());
+                            (*parentNode)->AddEdgeToChildNode(std::move(edge));
                         }
 
                         ////
@@ -206,7 +211,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
 
             if (rootNode == nullptr)
             {
-                rootNode = *it; // assign current node to root
+                rootNode = (*it).get(); // assign current node to root
             }
             else
             {
@@ -247,3 +252,4 @@ wxBitmap *ChatLogic::GetImageFromChatbot()
 {
     return _chatBot->GetImageHandle();
 }
+ 
