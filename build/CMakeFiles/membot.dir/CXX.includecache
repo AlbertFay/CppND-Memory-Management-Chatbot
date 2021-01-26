@@ -4081,6 +4081,8 @@ algorithm
 -
 ctime
 -
+memory
+-
 chatlogic.h
 C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/chatlogic.h
 graphnode.h
@@ -4095,6 +4097,26 @@ wx/bitmap.h
 -
 string
 -
+memory
+-
+
+C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/chatgui.cpp
+wx/filename.h
+-
+wx/colour.h
+-
+wx/image.h
+-
+string
+-
+memory
+-
+chatbot.h
+C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/chatbot.h
+chatlogic.h
+C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/chatlogic.h
+chatgui.h
+C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/chatgui.h
 
 C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/chatgui.h
 wx/wx.h
@@ -4117,6 +4139,8 @@ tuple
 -
 algorithm
 -
+memory
+-
 graphedge.h
 C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/graphedge.h
 graphnode.h
@@ -4133,8 +4157,12 @@ string
 -
 chatgui.h
 C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/chatgui.h
+memory
+-
 
 C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/graphedge.cpp
+memory
+-
 graphnode.h
 C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/graphnode.h
 graphedge.h
@@ -4145,12 +4173,16 @@ vector
 -
 string
 -
+memory
+-
 
 C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/graphnode.cpp
 graphedge.h
 C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/graphedge.h
 graphnode.h
 C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/graphnode.h
+memory
+-
 
 C:/Users/Albert/OneDrive/Documents/C++ Projects/CppND-Memory-Management-Chatbot/src/graphnode.h
 vector
