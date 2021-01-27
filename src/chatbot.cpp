@@ -77,6 +77,8 @@ ChatBot::ChatBot(ChatBot &&source){
 
     std::cout << "ChatBot Move Constructor called/n";
 
+    _chatLogic->SetChatbotHandle(this);
+
     *_currentNode = *source._currentNode;
     *_rootNode = *source._rootNode;
     *_chatLogic = *source._chatLogic;
@@ -96,6 +98,8 @@ ChatBot &ChatBot::operator=(ChatBot &&source){
     if(this == &source){
         return *this;
     }
+    _chatLogic->SetChatbotHandle(this);
+    
     *_currentNode = *source._currentNode;
     *_rootNode = *source._rootNode;
     *_chatLogic = *source._chatLogic;
