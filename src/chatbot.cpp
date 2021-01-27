@@ -51,9 +51,10 @@ ChatBot::ChatBot(const ChatBot &source){
 
     std::cout << "ChatBot Copy Constructor called" << "/n";
 
-    *_currentNode = *source._currentNode;
-    *_rootNode = *source._rootNode;
-    *_chatLogic = *source._chatLogic;
+    _currentNode = source._currentNode;
+    _rootNode = source._rootNode;
+    _chatLogic = source._chatLogic;
+    _image = source._image;
     *_image = *source._image;
 }
 
@@ -65,9 +66,10 @@ ChatBot& ChatBot::operator=(const ChatBot &source){
     if(this == &source){
         return *this;
     }
-    *_currentNode = *source._currentNode;
-    *_rootNode = *source._rootNode;
-    *_chatLogic = *source._chatLogic;
+    _currentNode = source._currentNode;
+    _rootNode = source._rootNode;
+    _chatLogic = source._chatLogic;
+    _image = source._image;
     *_image = *source._image;
     return *this;
 }
@@ -79,9 +81,10 @@ ChatBot::ChatBot(ChatBot &&source){
 
     _chatLogic->SetChatbotHandle(this);
 
-    *_currentNode = *source._currentNode;
-    *_rootNode = *source._rootNode;
-    *_chatLogic = *source._chatLogic;
+    _currentNode = source._currentNode;
+    _rootNode = source._rootNode;
+    _chatLogic = source._chatLogic;
+    _image = source._image;
     *_image = *source._image;
 
     source._image = nullptr;
@@ -100,9 +103,10 @@ ChatBot &ChatBot::operator=(ChatBot &&source){
     }
     _chatLogic->SetChatbotHandle(this);
     
-    *_currentNode = *source._currentNode;
-    *_rootNode = *source._rootNode;
-    *_chatLogic = *source._chatLogic;
+    _currentNode = source._currentNode;
+    _rootNode = source._rootNode;
+    _chatLogic = source._chatLogic;
+    _image = source._image;
     *_image = *source._image;
 
     source._image = nullptr;
