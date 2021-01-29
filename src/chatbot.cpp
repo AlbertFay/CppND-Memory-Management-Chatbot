@@ -54,6 +54,9 @@ ChatBot::ChatBot(const ChatBot &source){
     _currentNode = source._currentNode;
     _rootNode = source._rootNode;
     _chatLogic = source._chatLogic;
+
+    _chatLogic->SetChatbotHandle(this);
+
     _image = source._image;
     *_image = *source._image;
 }
@@ -69,6 +72,9 @@ ChatBot& ChatBot::operator=(const ChatBot &source){
     _currentNode = source._currentNode;
     _rootNode = source._rootNode;
     _chatLogic = source._chatLogic;
+
+    _chatLogic->SetChatbotHandle(this);
+
     _image = source._image;
     *_image = *source._image;
     return *this;
@@ -82,7 +88,7 @@ ChatBot::ChatBot(ChatBot &&source){
 
     _currentNode = source._currentNode;
     _rootNode = source._rootNode;
-    //_chatLogic = source._chatLogic;
+    _chatLogic = source._chatLogic;
     _image = source._image;
     *_image = *source._image;
 
@@ -106,7 +112,7 @@ ChatBot &ChatBot::operator=(ChatBot &&source){
     
     _currentNode = source._currentNode;
     _rootNode = source._rootNode;
-    //_chatLogic = source._chatLogic;
+    _chatLogic = source._chatLogic;
     _image = source._image;
     *_image = *source._image;
 
