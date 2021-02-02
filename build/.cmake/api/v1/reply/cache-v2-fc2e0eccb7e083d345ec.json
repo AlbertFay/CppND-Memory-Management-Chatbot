@@ -1127,7 +1127,7 @@
 				}
 			],
 			"type" : "BOOL",
-			"value" : "NO"
+			"value" : "OFF"
 		},
 		{
 			"name" : "CMAKE_SKIP_RPATH",
@@ -1143,7 +1143,7 @@
 				}
 			],
 			"type" : "BOOL",
-			"value" : "NO"
+			"value" : "OFF"
 		},
 		{
 			"name" : "CMAKE_STATIC_LINKER_FLAGS",
@@ -1255,7 +1255,7 @@
 				}
 			],
 			"type" : "BOOL",
-			"value" : "FALSE"
+			"value" : "OFF"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_wxWidgets",
@@ -2207,7 +2207,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "wxWidgets_wxrc_EXECUTABLE-NOTFOUND"
+			"value" : "C:/C++ Development/Libs/wxWidgets-3.1.4/utils/wxrc/gcc_mswu/wxrc.exe"
 		}
 	],
 	"kind" : "cache",
